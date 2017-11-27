@@ -1,0 +1,22 @@
+package negocio.cliente.imp;
+
+public class TransferCliente {
+
+	public TransferCliente(String text, String text2, boolean b) {
+	}
+
+	public TransferCliente(int parseInt, String text, String text2, boolean b) {
+		// TODO Apéndice de constructor generado automáticamente
+	}
+
+	public boolean getActivo() {
+		// TODO Apéndice de método generado automáticamente
+		return false;
+	}
+
+	public Object getId() {
+		// TODO Apéndice de método generado automáticamente
+		return null;
+	}
+
+}

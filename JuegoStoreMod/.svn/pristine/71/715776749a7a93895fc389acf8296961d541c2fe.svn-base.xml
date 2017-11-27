@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:id="_wD2PU5dwEeaJtv6CuhStqA" name="modelo de despliegue">
+  <eAnnotations xmi:id="_wD2PVJdwEeaJtv6CuhStqA" source="uml2.diagrams">
+    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_1KEiQJdwEeaJtv6CuhStqA" type="Deployment" name="BiciSoft">
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_A9EZwJdyEeaJtv6CuhStqA" element="_A8vpoJdyEeaJtv6CuhStqA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Image">
+        <children xmi:type="notation:DecorationNode" xmi:id="_A9EZwpdyEeaJtv6CuhStqA" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_A9EZw5dyEeaJtv6CuhStqA" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_A9EZxJdyEeaJtv6CuhStqA" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_A9EZxZdyEeaJtv6CuhStqA" type="Kind"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_A9EZxpdyEeaJtv6CuhStqA" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_A9EZx5dyEeaJtv6CuhStqA" type="Parent"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_A9EZyJdyEeaJtv6CuhStqA" visible="false" type="TaggedValueSet"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_A9EZyZdyEeaJtv6CuhStqA" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_A9EZypdyEeaJtv6CuhStqA" type="OperationCompartment"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_A9EZy5dyEeaJtv6CuhStqA" visible="false" type="DeploymentListCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_A9EZzJdyEeaJtv6CuhStqA" visible="false" type="DeploymentShapeCompartment"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_A9EZzZdyEeaJtv6CuhStqA" visible="false" type="NestedNodeListCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_A9EZzpdyEeaJtv6CuhStqA" visible="false" type="NestedNodeShapeCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_A9EZz5dyEeaJtv6CuhStqA" type="StructureCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A9EZwZdyEeaJtv6CuhStqA" x="8052" y="1320"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_Frs2oJdzEeaJtv6CuhStqA" element="_Frh3gJdzEeaJtv6CuhStqA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Frs2opdzEeaJtv6CuhStqA" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_Frs2o5dzEeaJtv6CuhStqA" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_Frs2pJdzEeaJtv6CuhStqA" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_Frs2pZdzEeaJtv6CuhStqA" type="Kind"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_Frs2ppdzEeaJtv6CuhStqA" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_Frs2p5dzEeaJtv6CuhStqA" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_Frs2qJdzEeaJtv6CuhStqA" visible="false" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_Frs2qZdzEeaJtv6CuhStqA" visible="false" type="OperationCompartment"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Frs2oZdzEeaJtv6CuhStqA" x="7884" y="4736"/>
+      </children>
+      <element xsi:nil="true"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Node" xmi:id="_A8vpoJdyEeaJtv6CuhStqA" name="Cliente Windows">
+    <eAnnotations xmi:id="_Oor_wJdzEeaJtv6CuhStqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_Oor_wZdzEeaJtv6CuhStqA" key="Computador"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_Frh3gJdzEeaJtv6CuhStqA" name="BiciSoft">
+    <eAnnotations xmi:id="_MUUJYJdzEeaJtv6CuhStqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_NH6JgJdzEeaJtv6CuhStqA" key="Aplicacion"/>
+    </eAnnotations>
+  </packagedElement>
+  <profileApplication xmi:id="_wD2PV5dwEeaJtv6CuhStqA">
+    <eAnnotations xmi:id="_wD2PWJdwEeaJtv6CuhStqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_wD2PWZdwEeaJtv6CuhStqA">
+    <eAnnotations xmi:id="_wD2PWpdwEeaJtv6CuhStqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+  </profileApplication>
+  <profileApplication xmi:id="_wD2PW5dwEeaJtv6CuhStqA">
+    <eAnnotations xmi:id="_wD2PXJdwEeaJtv6CuhStqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+  </profileApplication>
+</uml:Package>

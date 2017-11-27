@@ -1,0 +1,214 @@
+package presentacion.comandos;
+
+import presentacion.ListaComandos;
+import presentacion.comandos.Comando;
+import presentacion.comandos.imp.NegocioAgregarArticuloCompraComando;
+import presentacion.comandos.imp.NegocioAltaVideojuegoComando;
+import presentacion.comandos.imp.NegocioAltaClienteComando;
+import presentacion.comandos.imp.NegocioBajaVideojuegoComando;
+import presentacion.comandos.imp.NegocioBajaClienteComando;
+import presentacion.comandos.imp.NegocioCantidadVideojuegosComando;
+import presentacion.comandos.imp.NegocioDetalleVideojuegoComando;
+import presentacion.comandos.imp.NegocioDetalleClienteComando;
+import presentacion.comandos.imp.NegocioDetalleCompraComando;
+import presentacion.comandos.imp.NegocioDevolucionCompraComando;
+import presentacion.comandos.imp.NegocioEliminarArticuloCompraComando;
+import presentacion.comandos.imp.NegocioFinalizarCompraComando;
+import presentacion.comandos.imp.NegocioGestionCarritoCompraComando;
+import presentacion.comandos.imp.NegocioListaVideojuegoComando;
+import presentacion.comandos.imp.NegocioListaClienteComando;
+import presentacion.comandos.imp.NegocioListaCompraComando;
+import presentacion.comandos.imp.NegocioModificarVideojuegoComando;
+import presentacion.comandos.imp.NegocioModificarClienteComando;
+import presentacion.comandos.imp.NegocioNumeroClientesComando;
+import presentacion.comandos.imp.VistaAgregarArticuloCompraComando;
+import presentacion.comandos.imp.VistaAltaVideojuegoPCComando;
+import presentacion.comandos.imp.VistaAltaVideojuegoConsolaComando;
+import presentacion.comandos.imp.VistaAltaClienteComando;
+import presentacion.comandos.imp.VistaBajaVideojuegoComando;
+import presentacion.comandos.imp.VistaBajaClienteComando;
+import presentacion.comandos.imp.VistaPrincipalVideojuegoComando;
+import presentacion.comandos.imp.VistaPrincipalClienteComando;
+import presentacion.comandos.imp.VistaPrincipalCompraComando;
+import presentacion.comandos.imp.VistaVentanaPrincipalComando;
+import presentacion.comandos.imp.VistaCantidadVideojuegosQueryComando;
+import presentacion.comandos.imp.VistaDetalleVideojuegoComando;
+import presentacion.comandos.imp.VistaDetalleClienteComando;
+import presentacion.comandos.imp.VistaDetalleCompraComando;
+import presentacion.comandos.imp.VistaDevolucionCompraComando;
+import presentacion.comandos.imp.VistaEliminarArticuloCompraComando;
+import presentacion.comandos.imp.VistaGestionCarritoCompraComando;
+import presentacion.comandos.imp.VistaIniciarCompraComando;
+import presentacion.comandos.imp.VistaListaVideojuegoComando;
+import presentacion.comandos.imp.VistaListaClienteComando;
+import presentacion.comandos.imp.VistaListaCompraComando;
+import presentacion.comandos.imp.VistaModificarVideojuegoPCComando;
+import presentacion.comandos.imp.VistaModificarVideojuegoConsolaComando;
+import presentacion.comandos.imp.VistaModificarClienteComando;
+import presentacion.comandos.imp.VistaNumeroClientesQueryComando;
+
+/**
+ * Clase de la capa presentación que permite llamar a la vista correspondiente en funcion del evento recibido.
+ */
+public class FactoriaDeComandosImp extends FactoriaDeComandos{
+	@Override
+	public Comando getComando(int event){
+		Comando comando = null;
+		switch(event){
+		
+			// Principal
+			case ListaComandos.VENTANA_PRINCIPAL:
+				comando = new VistaVentanaPrincipalComando();
+				break;
+
+				
+			// Vistas Cliente	
+			
+			case ListaComandos.VENTANA_ALTA_CLIENTE:
+				comando = new VistaAltaClienteComando();
+				break;
+			case ListaComandos.VENTANA_BAJA_CLIENTE:
+				comando = new VistaBajaClienteComando();
+				break;
+			case ListaComandos.VENTANA_PRINCIPAL_CLIENTE:
+				comando = new VistaPrincipalClienteComando();
+				break;
+			case ListaComandos.VENTANA_DETALLE_CLIENTE:
+				comando = new VistaDetalleClienteComando();
+				break;
+			case ListaComandos.VENTANA_LISTA_CLIENTE:
+				comando = new VistaListaClienteComando();
+				break;
+			case ListaComandos.VENTANA_MODIFICAR_CLIENTE:
+				comando = new VistaModificarClienteComando();
+				break;
+			case ListaComandos.VENTANA_NUMERO_CLIENTES_QUERY:
+				comando = new VistaNumeroClientesQueryComando();
+				break;				
+				
+			// Vistas Compra	
+			case ListaComandos.VENTANA_AGREGAR_ARTICULO_COMPRA:
+				comando = new VistaAgregarArticuloCompraComando();
+				break;
+			case ListaComandos.VENTANA_PRINCIPAL_COMPRA:
+				comando = new VistaPrincipalCompraComando();
+				break;
+			case ListaComandos.VENTANA_DETALLE_COMPRA:
+				comando = new VistaDetalleCompraComando();
+				break;
+			case ListaComandos.VENTANA_DEVOLUCION_COMPRA:
+				comando = new VistaDevolucionCompraComando();
+				break;
+			case ListaComandos.VENTANA_ELIMINAR_ARTICULO_COMPRA:
+				comando = new VistaEliminarArticuloCompraComando();
+				break;
+			case ListaComandos.VENTANA_GESTION_CARRITO_COMPRA:
+				comando = new VistaGestionCarritoCompraComando();
+				break;
+			case ListaComandos.VENTANA_INICIAR_COMPRA:
+				comando = new VistaIniciarCompraComando();
+				break;
+			case ListaComandos.VENTANA_LISTA_COMPRA:
+				comando = new VistaListaCompraComando();
+				break;
+				
+			// Vistas Videojuego	
+			
+			case ListaComandos.VENTANA_ALTA_VIDEOJUEGO_PC:
+				comando = new VistaAltaVideojuegoPCComando();
+				break;
+			case ListaComandos.VENTANA_ALTA_VIDEOJUEGO_CONSOLA:
+				comando = new VistaAltaVideojuegoConsolaComando();
+				break;
+			case ListaComandos.VENTANA_BAJA_VIDEOJUEGO:
+				comando = new VistaBajaVideojuegoComando();
+				break;
+			case ListaComandos.VENTANA_PRINCIPAL_VIDEOJUEGO:
+				comando = new VistaPrincipalVideojuegoComando();
+				break;
+			case ListaComandos.VENTANA_DETALLE_VIDEOJUEGO:
+				comando = new VistaDetalleVideojuegoComando();
+				break;
+			case ListaComandos.VENTANA_LISTA_VIDEOJUEGO:
+				comando = new VistaListaVideojuegoComando();
+				break;
+			case ListaComandos.VENTANA_MODIFICAR_VIDEOJUEGO_PC:
+				comando = new VistaModificarVideojuegoPCComando();
+				break;
+			case ListaComandos.VENTANA_MODIFICAR_VIDEOJUEGO_CONSOLA:
+				comando = new VistaModificarVideojuegoConsolaComando();
+				break;
+			case ListaComandos.VENTANA_CANTIDAD_VIDEOJUEGOS_QUERY:
+				comando = new VistaCantidadVideojuegosQueryComando();
+				break;
+					
+			// Negocio	Cliente
+				
+			case ListaComandos.NEGOCIO_ALTA_CLIENTE:
+				comando = new NegocioAltaClienteComando();
+				break;
+			case ListaComandos.NEGOCIO_BAJA_CLIENTE:
+				comando = new NegocioBajaClienteComando();
+				break;
+			case ListaComandos.NEGOCIO_DETALLE_CLIENTE:
+				comando = new NegocioDetalleClienteComando();
+				break;
+			case ListaComandos.NEGOCIO_LISTA_CLIENTE:
+				comando = new NegocioListaClienteComando();
+				break;
+			case ListaComandos.NEGOCIO_MODIFICAR_CLIENTE:
+				comando = new NegocioModificarClienteComando();
+				break;	
+			case ListaComandos.NEGOCIO_NUMERO_CLIENTES_QUERY:
+				comando = new NegocioNumeroClientesComando();
+				break;
+				
+			// Negocio	Compra
+				
+			case ListaComandos.NEGOCIO_GESTION_CARRITO_COMPRA:
+				comando = new NegocioGestionCarritoCompraComando();
+				break;
+			case ListaComandos.NEGOCIO_AGREGAR_ARTICULO_COMPRA:
+				comando = new NegocioAgregarArticuloCompraComando();
+				break;
+			case ListaComandos.NEGOCIO_ELIMINAR_ARTICULO_COMPRA:
+				comando = new NegocioEliminarArticuloCompraComando();
+				break;
+			case ListaComandos.NEGOCIO_FINALIZAR_COMPRA:
+				comando = new NegocioFinalizarCompraComando();
+				break;
+			case ListaComandos.NEGOCIO_DEVOLUCION_COMPRA:
+				comando = new NegocioDevolucionCompraComando();
+				break;
+			case ListaComandos.NEGOCIO_DETALLE_COMPRA:
+				comando = new NegocioDetalleCompraComando();
+				break;
+			case ListaComandos.NEGOCIO_LISTA_COMPRA:
+				comando = new NegocioListaCompraComando();
+				break;
+				
+			// Negocio	Videojuego
+			
+			case ListaComandos.NEGOCIO_ALTA_VIDEOJUEGO:
+				comando = new NegocioAltaVideojuegoComando();
+				break;
+			case ListaComandos.NEGOCIO_BAJA_VIDEOJUEGO:
+				comando = new NegocioBajaVideojuegoComando();
+				break;
+			case ListaComandos.NEGOCIO_DETALLE_VIDEOJUEGO:
+				comando = new NegocioDetalleVideojuegoComando();
+				break;
+			case ListaComandos.NEGOCIO_LISTA_VIDEOJUEGO:
+				comando = new NegocioListaVideojuegoComando();
+				break;
+			case ListaComandos.NEGOCIO_MODIFICAR_VIDEOJUEGO:
+				comando = new NegocioModificarVideojuegoComando();
+				break;
+			case ListaComandos.NEGOCIO_CANTIDAD_VIDEOJUEGOS_QUERY:
+				comando = new NegocioCantidadVideojuegosComando();
+				break;
+		}
+		
+		return comando;
+	}
+}

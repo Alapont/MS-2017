@@ -1,0 +1,16 @@
+package presentacion.comandos.implementacion;
+
+//import negocio.factoria.FactoriaServicioAplicacion;
+import presentacion.ListaComandos;
+import presentacion.comandos.Comando;
+import presentacion.controlador.Contexto;
+
+public class NegocioAgregarArticuloCompraCommand implements Comando
+{
+	@Override
+	public Contexto execute(Object datos) 
+	{
+		//datos = FactoriaServicioAplicacion.getInstance().createSACompra().agregarArticulo((Contexto) datos);		
+		return new Contexto (ListaComandos.MOSTRAR_AGREGAR_ARTICULO_COMPRA, datos);
+	}
+}

@@ -1,0 +1,40 @@
+package negocio.videojuego.imp;
+
+import java.util.ArrayList;
+
+import presentacion.controlador.PareadoQuery;
+import negocio.videojuego.ServicioAplicacionVideojuego;
+
+public class ServicioAplicacionVideojuegoImp implements ServicioAplicacionVideojuego{
+
+	@Override
+	public int altaVideojuego(TransferVideojuego t) {
+		return 0;
+	}
+
+	@Override
+	public int bajaVideojuego(int id) {
+		return 0;
+	}
+
+	@Override
+	public int modificarVideojuego(TransferVideojuego t) {
+		return 0;
+	}
+
+	@Override
+	public TransferVideojuego detalleVideojuego(int id) {
+		return null;
+	}
+
+	@Override
+	public ArrayList<TransferVideojuego> listaVideojuego() {
+		return null;
+	}
+
+	@Override
+	public int numeroVideojuegos(PareadoQuery pQuery) {
+		return 0;
+	}
+
+}

@@ -1,0 +1,12 @@
+package integracion.cliente;
+
+import negocio.cliente.imp.TransferCliente;
+
+public class DAOCliente {
+
+	public TransferCliente searchId(int id) {
+		// TODO Apéndice de método generado automáticamente
+		return null;
+	}
+
+}

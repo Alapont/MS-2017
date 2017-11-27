@@ -1,0 +1,5 @@
+package negocio.compra.imp;
+
+public class ServicioAplicacionCompraImp {
+
+}

@@ -1,0 +1,13 @@
+package negocio.videojuego.imp;
+
+public class TransferVideojuegoConsola {
+
+	public TransferVideojuegoConsola(int id, String nombre, String desarrollador, double precio, String marca, boolean activo) {
+		
+	}
+
+	public TransferVideojuegoConsola(String nombre, String desarrollador, double precio, String marca, boolean activo) {
+
+	}
+
+}

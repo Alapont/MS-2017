@@ -1,0 +1,68 @@
+package negocio.videojuego.imp;
+
+public class TransferVideojuego {
+	protected int id;
+	protected String nombre;
+	protected String desarrollador;
+	protected double precio;
+	protected boolean activo;
+	
+	//Constructor vacio
+	public TransferVideojuego(){}
+	
+	//Constructor sin id (se usa al crear un videojuego)
+	public TransferVideojuego(String nombre, String desarrollador, double precio, boolean activo){
+		this.nombre = nombre;
+		this.desarrollador = desarrollador;
+		this.precio = precio;
+		this.activo = activo;
+	}
+	
+	//Constructor con todos los parametros
+	public TransferVideojuego(int id, String nombre, String desarrollador, double precio, boolean activo){
+		this.id = id;
+		this.nombre = nombre;
+		this.desarrollador = desarrollador;
+		this.precio = precio;
+		this.activo = activo;
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDesarrollador() {
+		return desarrollador;
+	}
+
+	public void setDesarrollador(String desarrollador) {
+		this.desarrollador = desarrollador;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+
+
+}

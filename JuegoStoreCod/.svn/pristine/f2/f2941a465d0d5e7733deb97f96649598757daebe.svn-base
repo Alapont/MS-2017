@@ -1,0 +1,7 @@
+package negocio.compra;
+
+import presentacion.controlador.Contexto;
+
+public class ServicioAplicacionCompra {
+
+}

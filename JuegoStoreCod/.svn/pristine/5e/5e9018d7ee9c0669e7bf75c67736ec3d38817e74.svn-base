@@ -1,0 +1,120 @@
+package negocio.videojuego.imp;
+
+import integracion.factoriaDao.FactoriaDAO;
+import integracion.transactionManager.TransactionManager;
+
+import java.util.ArrayList;
+
+import presentacion.controlador.PareadoQuery;
+import negocio.videojuego.ServicioAplicacionVideojuego;
+
+public class ServicioAplicacionVideojuegoImp implements ServicioAplicacionVideojuego{
+
+	@Override
+	public int altaVideojuego(TransferVideojuego t) {
+		int id;
+		
+		//Creamos una nueva transacción y la iniciamos.
+		TransactionManager.getInstance().nuevaTransaccion();
+		TransactionManager.getInstance().getTransaccion().start();
+		
+		TransferVideojuego tVideojuego = FactoriaDAO.getInstance().createDAOVideojuego().search(t);
+		
+		//Si no existe el videojuego
+		if(tVideojuego == null){
+			id = FactoriaDAO.getInstance().createDAOVideojuego().add(tVideojuego);
+			if(id == 0){
+				TransactionManager.getInstance().getTransaccion().rollback();
+			}
+			else{
+				TransactionManager.getInstance().getTransaccion().commit();
+			}
+		}
+		else{
+			if(tVideojuego.isActivo() == false){
+				tVideojuego.setActivo(true);
+				
+				id = FactoriaDAO.getInstance().createDAOVideojuego().update(tVideojuego);
+				if(id == 0){
+					TransactionManager.getInstance().getTransaccion().rollback();
+				}
+				else{
+					TransactionManager.getInstance().getTransaccion().commit();
+				}
+			}
+			else{
+				id = -1;
+			}
+		}
+		
+		//Finalmente cerramos la transación
+		TransactionManager.getInstance().eliminaTransaccion();
+		return id;
+	}
+
+	@Override
+	public int bajaVideojuego(int idAux) {
+		int id;
+		TransactionManager.getInstance().nuevaTransaccion();
+		TransactionManager.getInstance().getTransaccion().start();
+
+		TransferVideojuego tb = FactoriaDAO.getInstance().createDAOVideojuego().searchId(idAux);
+		
+		if (tb != null){
+		    if (tb.isActivo() == true) {
+			    tb.setActivo(false);
+			    id = FactoriaDAO.getInstance().createDAOVideojuego().update(tb);
+				if (id == 0){
+					TransactionManager.getInstance().getTransaccion().rollback();
+				}
+				else{
+					TransactionManager.getInstance().getTransaccion().commit();
+				}
+			}
+			else{
+				id = -2;
+			}
+		}
+		else{
+			id = -1;
+		}
+		
+		TransactionManager.getInstance().eliminaTransaccion();
+		return id;
+	}
+
+	@Override
+	public int modificarVideojuego(TransferVideojuego t) {
+		return 0;
+	}
+
+	@Override
+	public TransferVideojuego detalleVideojuego(int id) {
+		TransactionManager.getInstance().nuevaTransaccion();
+		TransactionManager.getInstance().getTransaccion().start();
+		
+		TransferVideojuego tVideojuego = FactoriaDAO.getInstance().createDAOVideojuego().searchId(id);
+		TransactionManager.getInstance().getTransaccion().commit();
+		
+		TransactionManager.getInstance().eliminaTransaccion();
+		return tVideojuego;
+	}
+
+	@Override
+	public ArrayList<TransferVideojuego> listaVideojuego() {
+		TransactionManager.getInstance().nuevaTransaccion();
+		TransactionManager.getInstance().getTransaccion().start();
+		
+		ArrayList<TransferVideojuego> listaVideojuegos = FactoriaDAO.getInstance().createDAOVideojuego().list();	
+		TransactionManager.getInstance().getTransaccion().commit();
+		
+		TransactionManager.getInstance().eliminaTransaccion();
+		return listaVideojuegos;
+	}
+
+	@Override
+	public int numeroVideojuegos(PareadoQuery pQuery) {
+		return 0;
+	}
+
+}

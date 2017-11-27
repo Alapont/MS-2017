@@ -1,0 +1,5 @@
+package integracion.compra;
+
+public class DAOCompra {
+
+}

@@ -1,0 +1,12 @@
+package negocio.cliente.imp;
+
+public class TransferCliente {
+
+	public TransferCliente(String text, String text2, boolean b) {
+	}
+
+	public TransferCliente(int parseInt, String text, String text2, boolean b) {
+		// TODO Apéndice de constructor generado automáticamente
+	}
+
+}

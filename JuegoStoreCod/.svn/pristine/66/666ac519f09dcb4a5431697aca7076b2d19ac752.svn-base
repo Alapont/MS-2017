@@ -1,0 +1,17 @@
+package integracion.factoriaDao;
+
+import integracion.cliente.DAOCliente;
+import integracion.compra.DAOCompra;
+import integracion.videojuego.DAOVideojuego;
+
+public abstract class FactoriaDAO {
+
+	public static Object getInstance() {
+		// TODO Apéndice de método generado automáticamente
+		return null;
+	}
+	public abstract DAOVideojuego createDAOVideojuego();
+	public abstract DAOCliente createDAOCliente();
+	public abstract DAOCompra createDAOCompra();
+
+}

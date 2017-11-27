@@ -1,0 +1,20 @@
+package negocio.compra.imp;
+
+public class TransferCompra {
+
+	public boolean getExisteArticulo(int parseInt) {
+		// TODO Apéndice de método generado automáticamente
+		return false;
+	}
+
+	public void setLineaCompra(int parseInt, int i) {
+		// TODO Apéndice de método generado automáticamente
+		
+	}
+
+	public boolean getVaciaLineaCompra() {
+		// TODO Apéndice de método generado automáticamente
+		return false;
+	}
+
+}

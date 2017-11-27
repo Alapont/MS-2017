@@ -1,0 +1,9 @@
+package negocio.compra.imp;
+
+public class TransferLineaDeCompra {
+
+	public TransferLineaDeCompra(int parseInt, int parseInt2, int parseInt3) {
+		// TODO Apéndice de constructor generado automáticamente
+	}
+
+}

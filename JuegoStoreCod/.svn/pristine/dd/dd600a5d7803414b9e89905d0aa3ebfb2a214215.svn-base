@@ -1,0 +1,5 @@
+package negocio.cliente.imp;
+
+public class ServicioAplicacionClienteImp {
+
+}
